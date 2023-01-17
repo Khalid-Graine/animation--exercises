@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1200px;
+    margin: auto;
+}
+h3 {
+    font-size: 25px;
+    margin: 10px 0px;
+}
+p {
+    margin: 10px 0px;
+}
+.child {
+    height: fit-content;
+    background-color: #f5f5f5;
+    border: 1px solid #cacaca;
+}
+.box {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+    background-color: red;
+}
+.one {
+   border: 1px solid red;
+   background-color: transparent; 
+   transition: background-color 1s;
+}
+.one:hover {
+    background-color: red;
+}
+.two {
+    background-color: red;
+}
+.three {
+    background-color: red ;
+    transition: border-radius 2s;
+}
+.three:hover {
+    border-radius: 50%;
+}
+.four {
+    background-color: blue;
+    transition: opacity 2s;
+}
+.four:hover {
+   opacity: 0; 
+}
+.five {
+    width: 50px;
+    height: 50px;
+    transition: width 2s, height 2s;
+}
+.five:hover {
+    width: 100px;
+    height: 100px;
+}
+.size {
+    margin: 20px;
+    width: 40%;
+}
+.img-one:hover {
+   filter: grayscale(90%);
+}
+.img-two:hover {
+    filter: sepia(50%) brightness(103%);
+}
+.img-three {
+    transition: border-radius 2s;
+}
+.img-three:hover {
+    border-radius: 20px;
+    filter:   sepia(50%) brightness(103%) ;
+}
+.img-four {
+    width: 20%;
+    transition: border-radius 2s , width 2s , filter 2s;
+}
+.img-four:hover {
+    width: 40%;
+    border-radius: 20px;
+    filter:  sepia(50%) brightness(100%);
+}
+
+.sex {
+    background-color:transparent;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 8px solid green;
+    border-left: 6px solid transparent ;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.seven {
+    background-color:transparent;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 8px solid green;
+    border-top: 6px solid transparent ;
+    animation-name: seven ;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+
+}
+@keyframes seven {
+    from {
+         transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(260deg);
+    }
+    
+}
+.seven:hover {
+    animation-play-state: running;
+}
+
+.small {
+    height: 100px;
+    width: 100%;
+    padding-left: 20px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+   
+}
+.inner-countainer {
+    position: relative;
+    padding: 16px 0px ;
+}
+a {
+    text-decoration: none;
+    padding: 10px 30px;
+    border: solid 4px blue;
+} 
+.part {
+width: 20px ;
+height: 10px;
+background-color: rgb(71, 71, 71);
+}
+.top {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    animation-name: part ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-play-state: paused;
+}
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    animation-name: part1  ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-play-state: paused;
+    
+}
+@keyframes part {
+    0% {
+        left: 10px;
+    }
+    50% {
+        left: 60px;
+    }
+    100% {
+        left: 10px;
+    }
+}
+@keyframes part1 {
+    0% {
+        right: 10px;
+    }
+    50% {
+        right: 60px;
+    }
+    100% {
+        right: 10px;
+    }
+}
+
+
+.inner-countainer:hover .part {
+     animation-play-state: running;
+}
+
+.bottom2 {
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    animation-name: part3  ;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-play-state: paused ;
+    
+}
+
+@keyframes part3 {
+    0% {
+        right: 10px;
+    }
+    20% {
+        right: 80px;
+        bottom: 0px;
+    }
+    40% {
+        right: 80px;
+        bottom:40px ;
+    }
+     60% {
+        right: 0px ;
+        bottom: 40px ;
+    }
+    80% {
+        right: 0px ;
+        bottom: 0px ;
+    }
+    100% {
+        right: 6px ;
+        bottom: 0px ;
+    }
+
+}
+.inner-countainer:hover .part {
+     animation-play-state: running;
+}
